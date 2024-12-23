@@ -140,10 +140,10 @@ const displayPetsCard = (card) => {
     if (card.length == 0) {
         petsCard.classList.remove('md:grid-cols-3')
         petsCard.innerHTML = `
-        <div class="min-h-[450px] rounded-lg w-[1200px] border-[1px] flex flex-col justify-center items-center space-y-5 bg-[#13131308] text-center ">
+        <div class="md:min-h-[450px] rounded-lg md:w-[1200px] border-[1px] flex flex-col justify-center items-center space-y-5 bg-[#13131308] text-center ">
         <img class="" src="images/error.webp" />
         <h1 class="text-3xl font-extrabold">No Information Available</h1>
-        <p class="text-[18px] text-[#606060]">We couldn't find any information about birds at the moment. Please check back later or explore other categories to <br/> discover a variety of pets waiting to become your perfect companion.</p>
+        <p class="text-[18px] text-[#606060]">We couldn't find any information about birds at the moment. Please check back later or explore other categories to <span class="hidden lg:inline"><br/></span> discover a variety of pets waiting to become your perfect companion.</p>
         </div>
         `
         return;
