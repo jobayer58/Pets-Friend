@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api ES6 Assignment</title>
+    <!-- daisy ui install link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font install lato link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- font style -->
+    <style>
+        .font-lato {
+            font-family: "Lato", serif;
+        }
+    </style>
+</head>
+
+<body class="font-lato">
+    <header>
+        <nav class=" flex justify-between w-11/12 mx-auto items-center py-10 ">
+            <!-- name -->
+            <div class="flex justify-center items-center gap-2">
+                <img class="h-6 w-7" src="images/logo.webp" alt="">
+                <h1 class="text-[#131313] text-[34px] font-bold">Peddy</h1>
+            </div>
+            <!--  -->
+            <div>
+                <ul class="flex text-[#808080] md:text-[20px] md:mr-24 md:gap-5 gap-2">
+                    <li>Home</li>
+                    <li>shop</li>
+                    <li>contact</li>
+                </ul>
+            </div>
+            <!-- profile icon -->
+            <div class="">
+                <img src="https://img.icons8.com/?size=64&id=tZuAOUGm9AuS&format=png" alt="">
+            </div>
+        </nav>
+        <!-- banner -->
+        <section>
+            <!-- text -->
+            <div class="text-center items-center space-y-7  ">
+                <h4 class="text-[#808080] md:text-[26px] text-[20px] font-bold">Bringing Families Together ❤️‍🔥</h4>
+                <h1 class="md:text-8xl text-4xl font-bold">Your Path to Adoption <br> Starts Her</h1>
+                <p class="md:text-[20px] mx-3 text-[#606060]">Discover the joy of pet adoption with us! Your journey to
+                    finding a loving companion starts here. <span class="hidden lg:inline"><br></span> Every pet
+                    deserves a caring home, and your perfect match awaits.</p>
+                <button id="view-btn" class="btn bg-[#0E7A81] text-yellow-50 h-[65px] w-[180px] text-xl">View
+                    More</button>
+            </div>
+            <!-- banner -->
+            <div class="flex justify-center items-center py-10">
+                <img src="images/pet.webp" alt="">
+            </div>
+        </section>
+    </header>
+    <main>
+        <section>
+            <div class="text-center space-y-4 justify-center items-center">
+                <h1 id="adopt-btn" class="text-4xl font-bold">Adopt Your Best Friend</h1>
+                <p class="text-[18px] text-[#606060]">Adopt your best friend today! Give a loving pet the
+                    home they
+                    deserve and gain a loyal companion for life. <span class="hidden lg:inline"><br></span> Start your
+                    journey toward unconditional love and endless happiness now.</p>
+            </div>
+        </section>
+
+        <!-- action section -->
+        <section id="" class="mt-10">
+            <div id="btn-category"
+                class="md:flex grid grid-cols-2 md:gap-8 gap-2 mx-5 py-10 justify-center items-center ">
+            </div>
+
+            <div class="flex w-10/12 mx-auto items-center justify-between py-8">
+                <h1 class="md:text-[24px] text-[22px] font-bold">Best Deal For you</h1>
+                <button class="bg-[#0E7A81] h-[60px] md:w-[180px] w-[150px] rounded-xl text-xl text-white">Sort By Price</button>
+            </div>
+            <!-- card  -->
+            <div class="flex md:w-10/12 md:mx-auto mx-2 justify-between gap-2">
+                <div id="pets-card" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+                </div>
+
+                <div id="displayImage" class="border-[1px] w-[350px] rounded-xl ">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="showModalData" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box md:px-0 px-5">
+            <div id="modal-content">
+
+            </div>
+            <div class="flex justify-center items-center ">
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button
+                            class="btn-ghost border-[1px] border-[#0E7A8126] bg-[#CBDCED] w-[250px] md:w-[450px] rounded-lg h-[40px] text-2xl font-bold text-[#0E7A81] ">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <footer class="mt-20 bg-black">
+        <section
+            class="md:flex md:justify-around py-20 text-white md:text-left text-center items-center justify-center space-y-7">
+            <div>
+                <div class="flex gap-3  items-center md:justify-start justify-center ">
+                    <img class="h-6 w-7" src="images/logo.webp" alt="">
+                    <h1 class="text-[34px] font-bold">Peddy</h1>
+                </div>
+                <ul class="mt-7 space-y-3 text-[#FFFFFF99]">
+                    <li>Location: av. Washington 165,</li>
+                    <li> NY CA 54003</li>
+                    <li>Phone: +31 85 964 47 25</li>
+                    <li>Email: info@yourdomain.com</li>
+                    <li>Openings hours: 9.00 AM - 5.00 PM</li>
+                </ul>
+                <div class="flex md:justify-start mt-2 justify-center">
+                    <img src="images/fb-48.png" alt="">
+                    <img src="images/twitter-48.png" alt="">
+                    <img src="images/youtube-48.png" alt="">
+                    <img src="images/instagram-48.png" alt="">
+                </div>
+            </div>
+            <!-- 2 -->
+            <div>
+                <h1 class="text-xl">Useful Links</h1>
+                <ul class="mt-7 space-y-3 text-[#FFFFFF99]">
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Animals</li>
+                    <li>Foundation</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <!-- 3 -->
+            <div>
+                <h1 class="text-xl">Drop a message</h1>
+                <input class="mt-7 h-[50px] w-[240px] rounded-lg bg-[#FFFFFF0D] pl-4" type="email"
+                    placeholder="Enter your email">
+                <br>
+                <button class="rounded-lg mt-3 h-[50px] w-[240px] text-2xl text-white bg-[#0E7A81]">Subscribe</button>
+            </div>
+        </section>
+    </footer>
+    <script>
+        document.getElementById('view-btn').addEventListener('click', function () {
+            const sectionAdopt = document.getElementById('adopt-btn')
+            sectionAdopt.scrollIntoView()
+        })
+
+    </script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>
