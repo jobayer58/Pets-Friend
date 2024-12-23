@@ -69,6 +69,7 @@ const modalDetails = async (petDot) => {
 const displayModal = (modal) => {
     console.log(modal)
     const detailsContainer = document.getElementById('modal-content')
+    detailsContainer.classList = 'px-5'
     detailsContainer.innerHTML = `
     <img class="rounded-lg h-[220px] w-full object-cover" src=${modal.image} />
     <h2 class="card-title font-bold text-2xl mt-2">${modal.pet_name}</h2>
